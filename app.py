@@ -6,7 +6,7 @@ st.set_page_config(layout ="wide")
 st.title("📊Sales Dashboard")
 @st.cache_data
 def load_data():
-    df = pd.read_excel("Sales_Data_Large_2.xlsx")
+    df = pd.read_excel("Sales_Data_Large_2.xls")
     return df
 df = load_data()
 
@@ -156,4 +156,5 @@ with col6:
         color_discrete_sequence= px.colors.sequential.Blues
     )
     fig6.update_traces(textinfo = "percent")
+
     st.plotly_chart(fig6,use_container_width= True)
